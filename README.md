@@ -12,13 +12,7 @@
     <p>Projeto desenvolvido por <strong>Bruno Eduardo</strong></p>
   </header>
 
-  <nav>
-    <button onclick="aumentarFonte()">Aumentar Fonte</button>
-    <button onclick="diminuirFonte()">Diminuir Fonte</button>
-    <button onclick="alternarContraste()">Alto Contraste</button>
-    <button onclick="sublinhadoLinks()">Sublinhar Links</button>
-    <button onclick="modoNoturno()">Modo Noturno</button>
-  </nav>
+
 
   <main>
     <section>
