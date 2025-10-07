@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jiu-Jitsu - Projeto Bruno Eduardo</title>
+  <style>
+    :root {
+      --cor-fundo: #f5f5f5;
+      --cor-primaria: #2c3e50;
+      --cor-accent: #e74c3c;
+      --cor-texto: #222;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--cor-primaria);
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+    }
+
+    nav {
+      background: #34495e;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav button {
+      background: white;
+      color: var(--cor-primaria);
+      border: none;
+      margin: 5px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: var(--cor-accent);
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--cor-primaria);
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin: 0;
+      padding: 0;
+    }
+
+    .campeoes, .faixas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .campeoes div, .faixas div {
+      flex: 1 1 200px;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--cor-primaria);
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Modo alto contraste */
+    .alto-contraste {
+      background: #000 !important;
+      color: #000000 !important;
+    }
+
+    .alto-contraste header,
+    .alto-contraste nav,
+    .alto-contraste footer {
+      background: #000 !important;
+      color: #ffffff !important;
+    }
+
+    /* Sublinhado dos links */
+    .sublinhado a {
+      text-decoration: underline;
+    }
+
+    /* Modo noturno */
+    .noturno {
+      background: #121212 !important;
+      color: #000000 !important;
+    }
+
+    .noturno header, .noturno nav, .noturno footer {
+      background: #1e1e1e !important;
+      color: #ffffff !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jiu-Jitsu Brasileiro</h1>
+    <p>Projeto desenvolvido por <strong>Bruno Eduardo</strong></p>
+  </header>
+
+  <nav>
+    <button onclick="aumentarFonte()">Aumentar Fonte</button>
+    <button onclick="diminuirFonte()">Diminuir Fonte</button>
+    <button onclick="alternarContraste()">Alto Contraste</button>
+    <button onclick="sublinhadoLinks()">Sublinhar Links</button>
+    <button onclick="modoNoturno()">Modo Noturno</button>
+  </nav>
+
+  <main>
+    <section>
+      <h2>História do Jiu-Jitsu</h2>
+      <p>O Jiu-Jitsu moderno nasceu no Japão, mas foi no Brasil que se desenvolveu o <strong>Jiu-Jitsu Brasileiro (BJJ)</strong> através da família Gracie. Chegou ao país no início do século XX e se popularizou graças a adaptações que tornaram a arte mais eficiente para defesa pessoal e competições.</p>
+    </section>
+
+    <section>
+      <h2>Maiores Campeões</h2>
+      <div class="campeoes">
+        <div><strong>Rickson Gracie</strong><br>Reconhecido por sua invencibilidade.</div>
+        <div><strong>Marcus "Buchecha" Almeida</strong><br>Multicampeão mundial faixa-preta.</div>
+        <div><strong>Roger Gracie</strong><br>Considerado um dos melhores de todos os tempos.</div>
+        <div><strong>Miguel Torres</strong><br>Destaque internacional no BJJ e MMA.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Faixas e Progressão</h2>
+      <div class="faixas">
+        <div>Branca: Iniciante</div>
+        <div>Azul: Aprimoramento técnico</div>
+        <div>Roxa: Avançado</div>
+        <div>Marrom: Pré-preta, quase mestre</div>
+        <div>Preta: Mestre e especialista</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Regras Básicas e Filosofia</h2>
+      <ul>
+        <li>O Jiu-Jitsu prioriza a técnica sobre a força.</li>
+        <li>Defesa pessoal e autocontrole são essenciais.</li>
+        <li>O respeito ao parceiro de treino é fundamental.</li>
+        <li>O objetivo é dominar o adversário através de alavancas e estrangulamentos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p>Email: bruno.eduardo@email.com</p>
+      <p>Telefone: (11) 98888-8888</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto desenvolvido por Bruno Eduardo</p>
+  </footer>
+
+  <script>
+    function aumentarFonte() {
+      let tamanhoAtual = window.getComputedStyle(document.body).fontSize;
+      document.body.style.fontSize = (parseFloat(tamanhoAtual) + 2) + 'px';
+    }
+
+    function diminuirFonte() {
+      let tamanhoAtual = window.getComputedStyle(document.body).fontSize;
+      document.body.style.fontSize = (parseFloat(tamanhoAtual) - 2) + 'px';
+    }
+
+    function alternarContraste() {
+      document.body.classList.toggle('alto-contraste');
+    }
+
+    function sublinhadoLinks() {
+      document.body.classList.toggle('sublinhado');
+    }
+
+    function modoNoturno() {
+      document.body.classList.toggle('noturno');
+    }
+  </script>
+</body>
+</html>
